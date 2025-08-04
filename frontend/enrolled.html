@@ -1,34 +1,28 @@
 <html>
     <head>
+        <title>Enrolled Students</title>
+        <link rel="stylesheet" href="enrolled.css">
         <script type="text/javascript" src="myscript.js"></script>
-
-        <style>
-            td{
-                background-color: aliceblue;
-            }
-    
-            body{
-                padding: 50px;
-            }
-        </style>
-    
     </head>
     <body>
-        <table align="center" border="1" style="background-color: black;">
-            <tr align="center" style="background-color: lightblue;">
-                <th width="100">Name</th>
-                <th width="200">Email Id</th>
-                <th width="150">Course Name</th>
-            </tr>
-
-            <tbody align="center" id="enrolledtable"></tbody> <!--Table body where rows will be inserted -->
-        </table>
-
-
-        <script type="text/javascript">
-            window.onload = function(){
-                showEnrolledStudents();
-            };
+        <div class="container">
+            <h1>Enrolled Students</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email Id</th>
+                            <th>Course Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="enrolledtable"></tbody>
+                </table>
+            </div>
+            <a href="index.html" class="back-btn">Back to Home</a>
+        </div>
+        <script>
+            window.onload = function(){ showEnrolledStudents(); };
         </script>
     </body>
 </html>
