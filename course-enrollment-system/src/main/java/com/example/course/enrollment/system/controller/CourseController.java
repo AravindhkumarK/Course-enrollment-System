@@ -18,16 +18,16 @@ public class CourseController {
      CourseService courseService;
 
 
-    @GetMapping("available")
+    @GetMapping("/available")
     public List<Course> getAllDetails()
     {
         return courseService.getAllDetails();
     }
 
-    @GetMapping("enrolled")
-    public List<CourseRegistration> getAllCourse(){
-        return courseService.getAllCourse();
-    }
+//    @GetMapping("enrolled")
+//    public List<CourseRegistration> getAllCourse(){
+//        return courseService.getAllCourse();
+//    }
 
     @PostMapping("/register")
     public String enrollCourse(@RequestParam("name") String name,
@@ -36,5 +36,10 @@ public class CourseController {
     {
         courseService.enrollCourse(name,email,courseName);
         return "Course registered successsfully";
+    }
+    @GetMapping("/home")
+    public String home()
+    {
+        return "Home pages";
     }
 }
